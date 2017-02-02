@@ -1,0 +1,24 @@
+{
+  "name": "realtorca",
+  "version": "1.0.0",
+  "description": "API wrapper for realtor.ca",
+  "main": "realtorca.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Froren/realtorca.git"
+  },
+  "keywords": [
+    "real estate",
+    "api"
+  ],
+  "author": "Froren",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Froren/realtorca/issues"
+  },
+  "homepage": "https://github.com/Froren/realtorca#readme",
+  "dependencies": {
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1"
+  }
+}

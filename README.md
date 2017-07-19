@@ -1,4 +1,7 @@
-# realtorca
+# realtorca       
+[![NPM](https://nodei.co/npm/realtorca.png)](https://npmjs.org/package/realtorca)
+
+
 
 #### Wrapper for the realtor.ca API
 
@@ -31,10 +34,10 @@ console.log( realtor.buildUrl(opts) );
 
 
 realtor.post(opts)
-  .then((data) => {
+  .then(data => {
       //json response
   })
-  .catch(err) => {
+  .catch(err => {
 
   });
 ```

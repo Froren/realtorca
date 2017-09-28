@@ -91,6 +91,8 @@ Open Houses First | `12` | `D`
 More Photos First | `13` | `D`
 Virtual Tour First | `11` | `D`
 
+* `organizationID` - sort/search by organizationID of a group of realtors. Value of this field can be found using a URL such as https://www.realtor.ca/Residential/OfficeDetails.aspx?OrganizationId=271479 as pointed out by Froren.
+* `individualID` - sort/search by agentID. Can be found using a URL such as https://www.realtor.ca/Agent/1914698/Gaetan-Kill-130---1152-Main... (in this case individualID = 1914698) as indicated by Kris.
 * `viewState` - `m`, `g`, or `1`. Seems irrelevant.
 * `Longitude` - Longitude to focus on? Unneeded
 * `Latitude` - Latitude to focus on? Unneeded

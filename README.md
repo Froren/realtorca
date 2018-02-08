@@ -98,7 +98,7 @@ Virtual Tour First | `11` | `D`
 * `Latitude` - Latitude to focus on? Unneeded
 * `ZoomLevel` - not sure what this does
 * `CurrentPage` - read somewhere that it maxes at 51
-* `RecordsPerPage`
+* `RecordsPerPage` - maxes at 200
 * `MaximumResults`
 * `PropertyTypeGroupID` - ???
 * `OwnershipTypeGroupId`

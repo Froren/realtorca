@@ -147,7 +147,7 @@ Virtual Tour First | `11` | `D`
 * `Waterfront` - `0` or `1`, defaults 0
 * `Acreage` - `0` or `1`, defaults 0
 * `Keywords` - search text
-* `Listingids` - Comma Separated listings Ids
+* `ListingIds` - Comma Separated listing Ids
 * `ReferenceNumber` - Search using MLS#
 * `OpenHouse` - `0` or `1`, must include if filtering by open house
     * `OpenHouseStartDate` - MM/DD/YYYY

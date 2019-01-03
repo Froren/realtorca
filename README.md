@@ -74,7 +74,7 @@ All of the following options are optional. The first 3 listed are required but t
     * `2` For sale
     * `3` For rent
 * `StoreyRange` - ``"min-max"`` i.e. `"2-3"`
-* `BedRange` - `"min-max"`
+* `BedRange` - `"min-max"` *if min = max, it searches for the exact value. If it's `1-0`, it means it's 1+. Maxes at 5*
 * `BathRange` - `"min-max"`
 
 *Others*

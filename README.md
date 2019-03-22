@@ -49,7 +49,7 @@ realtor.post(opts)
 
 All of the following options are optional. The first 3 listed are required but the wrapper will provide a default if they aren't specified.
 
-* `Culture` - `1` for EN, `2` for FR. Defaulted to 1.
+* `CultureId` - `1` for EN, `2` for FR. Defaulted to 1.
 * `ApplicationId` - Unused. Defaulted to 1.
 * `PropertySearchTypeId`- Defaulted to 1. Determines the type of property, possible values:
     * `0` No Preference

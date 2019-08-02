@@ -81,15 +81,15 @@ All of the following options are optional. The first 3 listed are required but t
 
 * Sorting:
 
-Type | `SortBy` | `SortOrder`
----- | -------- | -----------
-Low to High ($) | `1` | `A`
-High to Low ($) | `1` | `D`
-Date Posted: New to Old | `6` | `D`
-Date Posted: Old to New | `6` | `A`
-Open Houses First | `12` | `D`
-More Photos First | `13` | `D`
-Virtual Tour First | `11` | `D`
+Type | `Sort` |
+---- | -------- |
+Low to High ($) | `1-A` |
+High to Low ($) | `1-D` |
+Date Posted: New to Old | `6-D` |
+Date Posted: Old to New | `6-A` |
+Open Houses First | `12-D` |
+More Photos First | `13-D` |
+Virtual Tour First | `11-D` |
 
 * `organizationID` - sort/search by organizationID of a group of realtors. Value of this field can be found using a URL such as https://www.realtor.ca/Residential/OfficeDetails.aspx?OrganizationId=271479 as pointed out by Froren.
 * `individualID` - sort/search by agentID. Can be found using a URL such as https://www.realtor.ca/Agent/1914698/Gaetan-Kill-130---1152-Main... (in this case individualID = 1914698) as indicated by Kris.

@@ -13,6 +13,8 @@
 
 `realtor.buildUrl` - returns a URL with the query string constructed from the specified options.
 
+`realtor.optionsFromUrl` - returns options from a URL from realtor.ca (from the map view)
+
 *^ Note: The website link from `buildUrl` only allows specific price quantities. Any inconsistent `PriceMin` and `PriceMax` values will be rounded up to the next price level. Read the source for clarification.*
 
 #### Usage

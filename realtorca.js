@@ -19,6 +19,7 @@ class Realtor {
 			method: 'POST',
 			uri: API_URL,
 			form: form,
+			gzip: true,
 			json: true
 		});
 	}

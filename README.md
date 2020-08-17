@@ -5,7 +5,13 @@
 
 #### Wrapper for the realtor.ca API
 
-`https://api2.realtor.ca/Listing.svc/PropertySearch_Post`
+Filter all available listings
+
+**POST** `https://api37.realtor.ca/Listing.svc/PropertySearch_Post`
+
+Get details about a specific listing
+
+**GET** `https://api37.realtor.ca/Listing.svc/PropertyDetails`
 
 #### Methods
 
@@ -52,10 +58,10 @@ realtor.post(opts)
 ### API Reference/Options
 *Most of the information was pulled from the DOM nodes on the website*
 
-All of the following options are optional. The first 3 listed are required but the wrapper will provide a default if they aren't specified.
+Most of the following options are optional. The first 3 listed are required but the wrapper will provide a default if they aren't specified.
 
-* `CultureId` - `1` for EN, `2` for FR. Defaulted to 1.
-* `ApplicationId` - Unused. Defaulted to 1.
+* `CultureId` - language identifier, `1` for English, `2` for French. Defaults to 1.
+* `ApplicationId` - Mandatory for some endpoints, defaults to 1, their mobile app uses the value 37
 * `PropertySearchTypeId`- Defaulted to 1. Determines the type of property, possible values:
     * `0` No Preference
     * `1` Residential
@@ -65,15 +71,16 @@ All of the following options are optional. The first 3 listed are required but t
     * `5` Parking
     * `6` Vacant Land
     * `8` Multi Family
+* `HashCode` - Mandatory for some endpoints; their mobile app defaults it to 0
 
 *Most useful options*
 
 * `PriceMin` - Defaults to 0
 * `PriceMax`
-* `LongitudeMin` - Designates the bounds of the query, easiest to find these values from browser requests.
-* `LongitudeMax`
-* `LatitudeMin`
-* `LatitudeMax`
+* `LongitudeMin` - bottom left longitude of the map view port
+* `LatitudeMin` - bottom left latitude of the map view port
+* `LongitudeMax` - top right longitude of the map view port
+* `LatitudeMax` - top right latitude of the map view port
 * `TransactionTypeId`- Defaults to 2?
     * `1` For sale or rent
     * `2` For sale
@@ -84,7 +91,8 @@ All of the following options are optional. The first 3 listed are required but t
 
 *Others*
 
-* Sorting:
+* `SortBy` - How to sort (e.g. price, date, etc)
+* `SortOrder` - How to order the items after sorting them by a given field (e.g. ascending, descending)
 
 Type | `Sort` |
 ---- | -------- |
@@ -99,11 +107,11 @@ Virtual Tour First | `11-D` |
 * `organizationID` - sort/search by organizationID of a group of realtors. Value of this field can be found using a URL such as https://www.realtor.ca/Residential/OfficeDetails.aspx?OrganizationId=271479 as pointed out by Froren.
 * `individualID` - sort/search by agentID. Can be found using a URL such as https://www.realtor.ca/Agent/1914698/Gaetan-Kill-130---1152-Main... (in this case individualID = 1914698) as indicated by Kris.
 * `viewState` - `m`, `g`, or `1`. Seems irrelevant.
-* `Longitude` - Longitude to focus on? Unneeded
-* `Latitude` - Latitude to focus on? Unneeded
+* `Longitude` - (Optional) Longitude of the current user's location
+* `Latitude` - (Optional) Latitude of the current user's location
 * `ZoomLevel` - not sure what this does
 * `CurrentPage` - read somewhere that it maxes at 51
-* `RecordsPerPage` - maxes at 200
+* `RecordsPerPage` - their mobile app uses `500` as the default value
 * `MaximumResults`
 * `PropertyTypeGroupID` - ???
 * `OwnershipTypeGroupId`
@@ -145,6 +153,7 @@ Virtual Tour First | `11-D` |
     * `5` Semi-detached
     * `7` Stacked
     * `9` Link
+* `UnitRange` - how many units within a given building, similar to `BathRange`, such as `2-0` to denote 2 or more units
 * `AirCondition`- `0` or `1`, defaults 0
 * `Pool` - `0` or `1`, defaults 0
 * `Fireplace` - `0` or `1`, defaults 0
@@ -152,8 +161,8 @@ Virtual Tour First | `11-D` |
 * `Waterfront` - `0` or `1`, defaults 0
 * `Acreage` - `0` or `1`, defaults 0
 * `Keywords` - search text
-* `ListingIds` - Comma Separated listing Ids
-* `ReferenceNumber` - Search using MLS#
+* `ListingIds` - Comma Separated listing Ids to scope the search to
+* `ReferenceNumber` - Search using MLS #, this is required for viewing a listing detail
 * `OpenHouse` - `0` or `1`, must include if filtering by open house
     * `OpenHouseStartDate` - MM/DD/YYYY
     * `OpenHouseEndDate` - MM/DD/YYYY

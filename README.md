@@ -15,11 +15,13 @@ Get details about a specific listing
 
 #### Methods
 
-`realtor.post` - returns a request-promise POST with the given options
+`realtor.post(options)` - returns a promise which will resolve with a JSON object containing the query results returned from realtor.ca.
+
+`realtor.getPropertyDetails(options)` - returns a promise which will resolve with a JSON object containing the detailed information of a property. Passing `PropertyId`, **and** `ReferenceNumber`(MLS number) as options is **required**. The `PropertyId` can be obtained from the listing URL.
 
 `realtor.buildUrl` - returns a URL with the query string constructed from the specified options.
 
-`realtor.optionsFromUrl` - returns options from a URL from realtor.ca (from the map view)
+`realtor.optionsFromUrl` - returns options from a URL from realtor.ca (from the map view).
 
 *^ Note: The website link from `buildUrl` only allows specific price quantities. Any inconsistent `PriceMin` and `PriceMax` values will be rounded up to the next price level. Read the source for clarification.*
 

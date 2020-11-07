@@ -63,7 +63,7 @@ realtor.post(opts)
 Most of the following options are optional. The first 3 listed are required but the wrapper will provide a default if they aren't specified.
 
 * `CultureId` - language identifier, `1` for English, `2` for French. Defaults to 1.
-* `ApplicationId` - Mandatory for some endpoints, defaults to 1, their mobile app uses the value 37
+* `ApplicationId` - Mandatory for some endpoints, defaults to 37, their mobile app uses the value 37
 * `PropertySearchTypeId`- Defaulted to 1. Determines the type of property, possible values:
     * `0` No Preference
     * `1` Residential

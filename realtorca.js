@@ -4,7 +4,7 @@ const request = require('request-promise');
 const querystring = require('querystring');
 
 const MAP_URL = 'https://www.realtor.ca/Residential/Map.aspx';
-const API_URL = 'https://api2.realtor.ca';
+const API_URL = 'https://api.realtor.ca';
 const clientSettingsDefaults = {
 	CultureId: 1,
 	ApplicationId: 37

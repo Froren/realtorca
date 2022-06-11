@@ -5,18 +5,18 @@
   "main": "realtorca.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Froren/realtorca.git"
+    "url": "git+https://github.com/techapostle/realtorca.git"
   },
   "keywords": [
     "real estate",
     "api"
   ],
-  "author": "Froren",
+  "author": "Kian Dadkhah",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Froren/realtorca/issues"
+    "url": "https://github.com/techapostle/realtorca/issues"
   },
-  "homepage": "https://github.com/Froren/realtorca#readme",
+  "homepage": "https://github.com/techapostle/realtorca#readme",
   "dependencies": {
     "request": "^2.79.0",
     "request-promise": "^4.1.1"

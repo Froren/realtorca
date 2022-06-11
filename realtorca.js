@@ -1,10 +1,9 @@
 'use strict';
 
 const request = require('request-promise');
-const querystring = require('querystring');
 
-const MAP_URL = 'https://www.realtor.ca/Residential/Map.aspx';
-const API_URL = 'https://api2.realtor.ca';
+const MAP_URL = new URL('https://www.realtor.ca/Residential/Map.aspx');
+const API_URL = new URL('https://api2.realtor.ca');
 const clientSettingsDefaults = {
 	CultureId: 1,
 	ApplicationId: 37
@@ -41,7 +40,7 @@ class Realtor {
 
 		params = Object.assign(optionDefaults, options);
 
-		url = API_URL + "/Listing.svc/PropertyDetails?"  + querystring.encode(params);
+		url = API_URL + "/Listing.svc/PropertyDetails?" + new URLSearchParams(params.toString());
 
 		return request({
 			uri: url,
@@ -72,7 +71,7 @@ class Realtor {
 	 * @param {string} url The realtor.ca URL string that represents the filters
 	 */
 	static optionsFromUrl(url) {
-		return querystring.parse(url);	
+		return new URLSearchParams(url);
 	}
 }
 
